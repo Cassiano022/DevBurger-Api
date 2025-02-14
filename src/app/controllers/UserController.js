@@ -1,6 +1,6 @@
 import { v4 } from 'uuid';
 
-import User from '../app/models/User.js';
+const User = require('../models/Users');
 
 class UserController {
   async store(request, response) {
