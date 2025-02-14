@@ -1,6 +1,6 @@
 import { v4 } from 'uuid';
 
-const User = require('../models/Users');
+import User from '../models/User';
 
 class UserController {
   async store(request, response) {
@@ -11,10 +11,11 @@ class UserController {
       name,
       email,
       password_hash,
+      admin,
     });
 
     return response.status(201).json(user);
   }
 }
 
-export default new UserController;
+export default new UserController();
