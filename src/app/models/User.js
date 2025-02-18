@@ -11,9 +11,12 @@ class User extends Model {
       },
       {
         sequelize,
+        tableName: 'users',
+        timestamps: true, // Isso cria `createdAt` e `updatedAt` automaticamente
       },
     );
   }
 }
 
 export default User;
+
