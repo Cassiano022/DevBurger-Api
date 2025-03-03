@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  database:
+    image: postgres:15
+    container_name: devburger-db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: devburger
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: devburger-api
+    restart: always
+    depends_on:
+      - database
+    environment:
+      DB_HOST: database
+      DB_USER: postgres
+      DB_PASS: postgres
+      DB_NAME: devburger
+      DB_PORT: 5432
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+    command: yarn dev
+
+volumes:
+  postgres_data:
