@@ -11,11 +11,13 @@ class SessionController {
     const isValid = await schema.isValid(request.body);
 
     const emailOrPasswordIncorrect = () => {
-      return response.status(401).json({ error: 'Make sure you email or passaword are correct'})
-    }
+      return response
+        .status(401)
+        .json({ error: 'Make sure you email or passaword are correct' });
+    };
 
     if (!isValid) {
-     return emailOrPasswordIncorrect();
+      return emailOrPasswordIncorrect();
     }
 
     const { email, password } = request.baby;
