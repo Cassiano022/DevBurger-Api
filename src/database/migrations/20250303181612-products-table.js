@@ -5,17 +5,17 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('product', { 
       id: {
-      type: Sequelize.INTERGER,
-      allowNull: false,
-      primaryKey: true, 
-      autoIncrement: true,
+        type: Sequelize.INTEGER, // Corrigido de INTERGER para INTEGER
+        allowNull: false,
+        primaryKey: true, 
+        autoIncrement: true,
       },
       name: {
         type: Sequelize.STRING,
         allowNull: false,
       },
       price: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.INTEGER, // Correto, se o preço for um número inteiro
         allowNull: false,
       },
       category: {
@@ -26,11 +26,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      created_at: {
+      createdAt: { // Correto, usar createdAt
         type: Sequelize.DATE,
         allowNull: false
       },
-      updated_at: {
+      updatedAt: { // Correto, usar updatedAt
         type: Sequelize.DATE,
         allowNull: false
       },

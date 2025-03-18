@@ -36,4 +36,5 @@ async index( request, response) {
 
 }
 
-export default ProductController;
+export default new ProductController();
+

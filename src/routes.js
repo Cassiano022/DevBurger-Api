@@ -8,11 +8,14 @@ import ProductController from './app/controllers/ProductController';
 
 const routes = new Router();
 
+const productController = new ProductController();
+
 const uploads = multer(multerConfig)
 
 routes.post('/users', UserController.store);
 routes.post('/session', SessionController.store);  
-routes.post('/Product', uploads.single('file'), ProductController.store);
-routes.get('/produts', ProductController.index);
+routes.post('/product', uploads.single('file'), productController.store);
+routes.get('/products', productController.index);
+
 
 export default routes; 
