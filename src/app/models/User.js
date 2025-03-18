@@ -14,7 +14,7 @@ class User extends Model {
       {
         sequelize,
         tableName: 'users',
-        timestamps: true, // Isso cria `createdAt` e `updatedAt` automaticamente
+        timestamps: true, 
       },
     );
     this.addHook('beforeSave', async (user) => {
