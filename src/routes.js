@@ -13,9 +13,11 @@ const routes = new Router();
 const uploads = multer(multerConfig)
 
 routes.post('/users', UserController.store);
-routes.post('/session', SessionController.store);  
+routes.post('/session', SessionController.store); 
+
+routes.use(authMiddleware);
 routes.post('/products', uploads.single('file'), ProductController.store);
-routes.get('/products',authMiddleware, ProductController.index);
+routes.get('/products', ProductController.index);
 
 
 export default routes; 
