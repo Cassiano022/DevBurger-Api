@@ -24,7 +24,7 @@ class ProductController {
       price,
       category_id,
       path,
-    })
+    });
 
     
     return response.status(201).json(product);
