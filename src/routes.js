@@ -11,6 +11,7 @@ import CategoryController from './app/controllers/CategoryController';
 import OrderController from './app/controllers/OrderController';
 
 
+
 const routes = new Router();
 
 
@@ -33,6 +34,8 @@ routes.put('/categories/:id', uploads.single('file'), CategoryController.update)
 routes.post('/orders', OrderController.store);
 routes.get('/orders', OrderController.index);
 routes.put('/orders/:id', OrderController.update);
+
+
 
 
 export default routes; 
