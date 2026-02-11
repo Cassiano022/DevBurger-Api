@@ -1,7 +1,3 @@
-Para os seus projetos que envolvem o Backend e a Automação, é fundamental mostrar que você entende de infraestrutura, organização de banco de dados e qualidade de código. Os arquivos que você enviou (como .sequelizerc e nodemon.json) indicam um projeto robusto em Node.js.
-
-Aqui estão as explicações sugeridas para o seu GitHub:
-
 🛠️ Backend & Infrastructure (API Node.js)
 Este repositório contém a lógica de servidor e integração de dados para aplicações escaláveis, utilizando Node.js e Docker.
 
