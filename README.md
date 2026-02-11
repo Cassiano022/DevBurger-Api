@@ -1,44 +1,49 @@
-🛠️ Backend & Infrastructure (API Node.js)
-Este repositório contém a lógica de servidor e integração de dados para aplicações escaláveis, utilizando Node.js e Docker.
+🍔 DevBurguer API - Gerenciamento de Pedidos
+Esta é a API robusta que sustenta o ecossistema DevBurguer. Ela foi desenvolvida para lidar com o fluxo completo de uma hamburgueria, desde a autenticação de usuários até o processamento de pedidos complexos.
 
-Destaques Técnicos
-ORM com Sequelize: Utilização do arquivo .sequelizerc para organizar migrações, sementes (seeds) e modelos de banco de dados SQL de forma profissional.
-
-Ambiente de Desenvolvimento: Configuração do nodemon.json para reinicialização automática do servidor, acelerando o ciclo de desenvolvimento.
-
-Padronização de Código: Implementação de eslint.config.mjs e .prettierrc.json para garantir que o código siga as melhores práticas de mercado e mantenha uma estrutura limpa.
+🛠️ Tecnologias e Ferramentas
+O projeto utiliza uma stack moderna focada em performance e organização de dados:
 
 
-Conteinerização: Uso de Docker para garantir que a aplicação rode de forma idêntica em qualquer ambiente.
+Node.js: Ambiente de execução para o desenvolvimento de APIs escaláveis.
++2
 
-🤖 IA & Automação (n8n & AWS Bedrock)
-Repositório dedicado a fluxos de automação inteligente e integração com modelos de linguagem (LLMs).
-+1
+Sequelize (ORM): Utilizado para a gestão e modelagem de dados SQL, com suporte total a migrações e sementes (seeds) através do arquivo .sequelizerc.
 
-O que este projeto faz?
 
-Workflows com n8n: Criação de fluxos automatizados para conectar diferentes ferramentas e APIs sem a necessidade de código manual extensivo.
+Bancos de Dados: Integração com PostgreSQL/MySQL (SQL) e MongoDB (NoSQL) para garantir persistência eficiente de dados.
 +2
 
 
-IA Generativa: Integração com AWS Bedrock para aplicação de IA em processos de negócio, utilizando técnicas avançadas de Engenharia de Prompt.
-+2
-
-
-Processamento de Dados: Utilização de scripts em Python para tratamento de dados e automações complementares.
+Docker: Conteinerização da aplicação e dos bancos de dados para garantir um ambiente de desenvolvimento padronizado.
 +1
 
-☕ The Coffee Nook
-Projeto focado em Front-end Essentials, demonstrando domínio sobre a base da web.
-+1
+Nodemon: Configurado via nodemon.json para proporcionar um fluxo de desenvolvimento contínuo com hot-reload.
 
+📏 Padrões de Qualidade de Código
+Para garantir um código limpo, sustentável e pronto para o trabalho em equipe, a API segue rigorosos padrões:
 
-Tecnologias: HTML5, CSS3 e JavaScript (ES6+) puro.
-+1
+ESLint: Configuração avançada via eslint.config.mjs e eslintrc.json para identificar e corrigir problemas de sintaxe e padrões de código automaticamente.
 
+Prettier: Formatação de código padronizada através do .prettierrc.json.
 
-Responsividade: Layout totalmente adaptável para dispositivos móveis, focado na experiência do usuário final.
-+1
+Gestão de Dependências: Uso otimizado de package.json e yarn.lock para garantir o controle exato das versões das bibliotecas.
 
+🚀 Como Executar o Backend
+Clone o repositório:
 
-Deploy: Hospedado via GitHub Pages para fácil visualização.
+Bash
+git clone https://github.com/cassiano022/devburguer-api.git
+Instale as dependências:
+
+Bash
+yarn install
+Configure o Banco de Dados:
+Certifique-se de que suas credenciais estão corretas e execute as migrações:
+
+Bash
+npx sequelize-cli db:migrate
+Inicie o servidor:
+
+Bash
+yarn dev
